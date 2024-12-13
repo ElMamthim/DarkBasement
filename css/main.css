@@ -1,13 +1,28 @@
+:root {
+    --primary-color: #000000;
+    --secondary-color: #ffffff;
+    --tertiary-color: #333333;
+    --quaterary-color: #8c8c8c;
+    --quinteary-color: #890000;
+    --primary-font: 'Courier New', Courier, monospace;
+    --secondary-font: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* las fuentes son un ejemplo we usa fuentes por favor con font-family 
+no le des la misma fuente por defecto a todo we busca algunas que te gustes y dale la primary a los parrafos y la secondary a los titulos*/
+
 html {
     font-size: 62.5%;  
 }
 body {
-    background-color: rgb(46, 46, 46);
+    background-color: var(--primary-color);
 }
 header {
-    background-color: rgb(46, 46, 46);
+    background-color: var(--primary-color);
 }
-
+span {
+    color: var(--secondary-color);
+}
 .centro {
     display: flex;
     justify-content: left;
@@ -15,17 +30,25 @@ header {
     flex-direction: row;
     gap: 0.6rem;
     width: 100%;
+    margin: .8rem;
 }
 .info {
     flex: 1;
     text-align: right;
+}
+a.inf {
+    font-size: 1.5rem;
+}
+.info a {
+    text-decoration: none;
+    color: var(--secondary-color);
 }
 .icon {
     width: 32px;
 }
 span.titulo {
     font-size: 2.5rem;
-    color: whitesmoke;
+    color: var(--secondary-color);
 }
 .header-container {
     display: flex;
@@ -49,21 +72,43 @@ span.txt-2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: var(--secondary-color);
     box-sizing: border-box;
     height: 60rem;
     position: absolute;
-    top: 66px;
+    top: 88px;
     width: 100%;
     left: 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.1), #2e2e2e)
+    background: linear-gradient(rgba(0, 0, 0, 0.1), #000000);
+}
+a.rd img {
+    width: 3.5rem;
+}
+ul.redes {
+    list-style: none;
+    padding: 0;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+.cuerpo {
+    display: flex;
+    gap: 2rem;
+    margin: 6rem;
+}
+span.txt-3 {
+    font-size: 3.6rem;
+    color: var(--tertiary-color);
+}
+span.txt-4 {
+    font-size: 2.6rem;
 }
 .cuerpo img{
-    height: 320px;
-    width: 320px;
+    width: 550px;
     object-fit: cover;
     position: relative;
-    height: 60rem;
 }
 
 .conteiner-down {
@@ -83,6 +128,40 @@ span.txt-2 {
 .icon-t {
     max-height: 64px;
     max-width: 64px;
+}
+.proyectos {
+    color: var(--secondary-color);
+}
+.complementos {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 800px;
+    margin: 0 auto;
+}
+img.complementos {
+    width: 100%;
+}
+.addons {
+    display: flex;
+    border-radius: 0 .4rem .4rem 0;
+    box-sizing: border-box;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: left;
+    align-items: start;
+}
+.cuadro {
+    border: 1px solid red;
+}
+.c-img {
+    width: 37rem;
+}
+.c-inf {
+    border: 1px solid red;
+    text-align: center;
+    font-size: 2rem;
 }
 
 /** 567px --> 767px */
