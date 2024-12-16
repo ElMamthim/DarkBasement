@@ -8,9 +8,6 @@
     --secondary-font: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-/* las fuentes son un ejemplo we usa fuentes por favor con font-family 
-no le des la misma fuente por defecto a todo we busca algunas que te gustes y dale la primary a los parrafos y la secondary a los titulos*/
-
 html {
     font-size: 62.5%;  
 }
@@ -35,6 +32,8 @@ span {
 .info {
     flex: 1;
     text-align: right;
+    display: flex;
+    justify-content: end;
 }
 a.inf {
     font-size: 1.5rem;
@@ -56,7 +55,7 @@ span.titulo {
     align-items: center;
 }
 .fondo img {
-    width: 100vw;
+    width: 100%;
     object-fit: cover;
     position: relative;
     height: 60rem;
@@ -136,7 +135,7 @@ span.txt-4 {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    width: 800px;
+    width: 1155px;
     margin: 0 auto;
 }
 img.complementos {
@@ -153,13 +152,14 @@ img.complementos {
     align-items: start;
 }
 .cuadro {
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 .c-img {
     width: 37rem;
 }
 .c-inf {
-    border: 1px solid red;
+    /* border: 1px solid red; */
+    background-color: var(--tertiary-color);
     text-align: center;
     font-size: 2rem;
 }
