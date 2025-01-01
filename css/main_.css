@@ -8,12 +8,6 @@
     --secondary-font: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-h2{
-    color: var(--secondary-color);
-    font-size: var( --overall-font-size );     
-    box-sizing: border-box; 
-}
-
 html {
     font-size: 62.5%;  
 }
@@ -44,6 +38,10 @@ ul.redes {
 header {
     background-color: var(--primary-color);
 }
+.header-info ul {
+    display: none;
+    list-style: none;
+} 
 .header-nucleo.container {
     display: flex;
     justify-content: left;
@@ -64,7 +62,7 @@ header {
     width: 100%;
     object-fit: cover;
     position: relative;
-    height: 40rem;
+    height: 55rem;
 }
 .background-font {
     display: flex;
@@ -72,11 +70,40 @@ header {
     justify-content: center;
     align-items: center;
     color: var(--secondary-color);
-    height: 40rem;
+    height: 55rem;
     position: absolute;
-    top: 104px;
+    top: 64px;
     width: 100%;
     background: linear-gradient(rgba(0, 0, 0, 0.1), #000000);
+}
+.container.cuerpo-container {
+    display: flex;
+    flex-direction: column;
+}
+.div-center {
+    padding: 1rem;
+    display: flex ;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+span.txt-c {
+    font-size: 3rem;
+    background: linear-gradient(90deg, rgba(61, 61, 61, 1) 0%, rgba(117, 117, 117, 1) 42%, rgba(196, 196, 196, 1) 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+h2 {
+    color: var(--secondary-color);
+}
+h2.txt-c {
+    padding: 1rem;
+    color: var(--secondary-color);
+    font-size: 1.4rem;
+}   
+img.background-font-2 {
+    width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
 }
 .inf {
     text-decoration: none;
@@ -87,7 +114,29 @@ span {
     color: var(--secondary-color);
     font-size: 2.5rem;
 }
-
+span.span-complementos {
+    font-size: 3.6rem;
+    color: var(--tertiary-color);
+}
+section.section.general-s {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+.container.complementos-container {
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+img.complementos {
+    width: 170px;
+}
+.addon-info {
+    /* border: 1px solid red; */
+    background-color: var(--tertiary-color);
+    text-align: center;
+    font-size: 1.8rem;
+}
 body {
     font-size: 1.6rem;
     margin: 0;
@@ -114,7 +163,26 @@ body {
     padding: 0;
     box-sizing: border-box; 
 }
-
+.caja-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+.general-p a {
+    text-decoration: none;
+    color: white;
+}
+.general-p ul {
+    padding: 0;
+}
+.pie-pag.container {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem auto;
+}
 /* MediaQ */
 
 /** 567px --> 767px */
@@ -124,7 +192,7 @@ body {
         padding: 0 16px;
     }
     .background-font {
-        top: 87px;
+        top: 65px;
     } 
 }
 /** 768px --> 1023px */
@@ -132,13 +200,44 @@ body {
     .container {
         max-width: 720px;
         padding: 0 24px; 
-    }   
+    }
+    .container.cuerpo-container {
+        flex-direction: row;
+    }
+    img.background-font-2 {
+        width: 50%; 
+    }
+    .div-center {
+        padding: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: column;
+    }
+    span.txt-c {
+        font-size: 4rem;
+    }
+    h2.txt-c {
+        font-size: 1.7rem;
+    }
+    .pie-pag.container {
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+    }
 }
 /** 1024px --> 1999px */
 @media ( min-width: 1024px ) {
     .container {
         max-width: 992px;
         padding: 0 32px;
+    }
+    .header-info ul {
+        display: flex;
+        padding: 0;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
     }
 }
 /** 1200px --> 1399px */
